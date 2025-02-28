@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Travel Website</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+}
+
+/* Style the top navigation bar */
+.navbar {
+  display: flex;
+  background-color: #333;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Column container */
+.row {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row, .navbar {   
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- Note -->
+<div style="background:rgb(30, 0, 255);padding:5px">
+  <h4 style="text-align:center">Travel Website</h4>
+</div>
+
+<!-- Header -->
+<div class="header">
+  <img src="adven.jpg" class="img-fluid" alt="..." style="width:100%">
+  <h1>Adventure Website</h1>
+  <p></b> Tourism Hotspots</p>
+</div>
+
+<!-- Navigation Bar -->
+<div class="navbar">
+  <a href="https://visitabudhabi.ae/en/where-to-go/adventure-and-theme-parks?_gl=1%2Apgea02%2A_up%2AMQ..%2A_gs%2AMQ.">Adventure and Theme Parks</a>
+  <a href="https://visitabudhabi.ae/en/where-to-go/beaches?_gl=1%2A1x71psu%2A_up%2AMQ..%2A_gs%2AMQ..">Beaches</a>
+  <a href="https://visitabudhabi.ae/en/where-to-go/dining-and-restaurants?_gl=1%2A1x71psu%2A_up%2AMQ..%2A_gs%2AMQ..">Restaurants</a>
+  <a href="https://visitabudhabi.ae/en/where-to-go/sports-clubs?_gl=1%2A13csilr%2A_up%2AMQ..%2A_gs%2AMQ..">Sports Clubs</a>
+</div>
+
+<!-- The flexible grid (content) -->
+<div class="row">
+  <div class="side">
+    <h2>Places to Visit</h2>
+    <h5>Places to visit in Dubai:</h5>
+    <img src="dubai.jpg" class="img-fluid" alt="..." style="width:100%">Dubai
+    <p>There is an endless array of places to visit in Abu Dhabi. Dive into adventure at theme parks on Yas Island or delve into history at the city's oldest standing structure Qasr Al Hosn, or ancient tombs, forts and oases in Al Ain</p>
+    <h3>More places to visit</h3>
+    <p>Exciting Places to visit.</p>
+    <img src="tour1.jpg" class="img-fluid" alt="..." style="width:100%"><br>
+    <img src="tour2.jpg" class="img-fluid" alt="..." style="width:100%"><br>
+    <img src="tour3.jpg" class="img-fluid" alt="..." style="width:100%">
+  </div>
+  <div class="main">
+    <h2>Bora Bora</h2>
+    <h5>Island in French</h5>
+    <img src="place1.jpg" class="img-fluid" alt="..." style="width:100%">
+    <p>Bora Bora, also known as Porapora, is a volcanic island in French Polynesia, located in the central South Pacific Ocean, about 165 miles northwest of Tahiti</p>
+    <p>Bora-Bora is a volcanic island in the central South Pacific Ocean. It is part of the Leeward Islands, in the Society Islands of French Polynesia. Bora-Bora lies about 165 miles (265 kilometers) northwest of Tahiti. Bora-Bora is spelled Porapora in Tahitian and means “first born.” According to tradition, it was the first island created after Raiatea, the largest of the Leeward Islands.</p>
+    <h2>India Gate</h2>
+    <h5>Historical Monument</h5>
+    <img src="place2.jpg" class="img-fluid" alt="..." style="width:100%">
+    <p>India Gate, originally called the All India War Memorial, is a monument in New Delhi that commemorates 74,187 Indian Army soldiers who died between 1914 and 1921 during World War I, in various locations including France, Flanders, Mesopotamia, Persia, East Africa, Gallipoli, and the Third Anglo-Afghan War</p>
+    <p>At the centre of New Delhi stands the 42 m high India Gate, an “Arc-de-Triomphe” like archway in the middle of a crossroad. Almost similar to its French counterpart, it commemorates the 70,000 Indian soldiers who lost their lives fighting for the British Army during the World War I..</p>
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <h2>Copyright © 2004 - 2025 ASMALLWORLD AG</h2>
+</div>
+
+</body>
+</html>
+
+
