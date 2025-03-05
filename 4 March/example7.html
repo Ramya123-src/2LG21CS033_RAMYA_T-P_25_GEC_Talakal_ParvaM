@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Difference of Squares</title>
+</head>
+<body>
+    <div>
+        <label for="a">Value a:</label>
+        <input type="number" id="a" value="2">
+    </div>
+    <div>
+        <label for="b">Value b:</label>
+        <input type="number" id="b" value="1">
+    </div>
+    <button onclick="calculateDifferenceOfSquares()">Calculate</button>
+    <div id="output"></div>
+
+    <script>
+        function calculateDifferenceOfSquares() {
+            let a = parseInt(document.getElementById("a").value);
+            let b = parseInt(document.getElementById("b").value);
+
+            if (a < 10 && b < 10) {
+                let leftHandSide = Math.pow(a, 2) - Math.pow(b, 2);
+                let rightHandSide = (a - b) * (a + b);
+
+                let outputDiv = document.getElementById("output");
+                outputDiv.innerHTML = `
+                    <p>a<sup>2</sup> - b<sup>2</sup> = (a - b)(a + b)</p>
+                    <p>${a}<sup>2</sup> - ${b}<sup>2</sup> = (${a} - ${b})(${a} + ${b})</p>
+                    <p>${leftHandSide} = ${rightHandSide}</p>
+                    <p>${a}<sup>2</sup> - ${b}<sup>2</sup> = ${a*a} - ${b*b} = ${leftHandSide}</p>
+                    <p>(${a} - ${b})(${a} + ${b}) = ${a-b} * ${a+b} = ${rightHandSide}</p>
+                    
+                    <p>(a + b)<sup>2</sup> = a<sup>2</sup> + 2ab + b<sup>2</sup> = ${Math.pow(a + b, 2)}</p>
+                    <p>a<sup>2</sup> + b<sup>2</sup> = (a + b)<sup>2</sup> - 2ab = ${Math.pow(a + b, 2) - 2 * a * b}</p>
+                    <p>(a - b)<sup>2</sup> = a<sup>2</sup> - 2ab + b<sup>2</sup> = ${Math.pow(a - b, 2)}</p>
+                    <p>a<sup>3</sup> - b<sup>3</sup> = (a - b)(a<sup>2</sup> + ab + b<sup>2</sup>) = ${(a-b)*(a*a + a*b + b*b)}</p>
+
+                `;
+            } else {
+                document.getElementById("output").innerHTML = "Both values (a and b) must be less than 10.";
+            }
+        }
+    </script>
+</body>
+</html>
