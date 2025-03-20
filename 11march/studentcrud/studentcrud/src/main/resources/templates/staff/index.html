@@ -10,45 +10,33 @@
 <body>
 
 <div class="container mt-3">
-    <h2>Employee List</h2>
+    <h2>Staff List</h2>
+    <a th:href ="@{/consumer/create}" class = "btn btn-warning">Add Staff</a>
     <a th:href ="@{/users/create}" class = "btn btn-warning">Add Student</a>
     <a th:href ="@{/ramya/create}" class = "btn btn-warning">Add Employee</a>
+    
     <table class="table table-success table-striped">
     <thead class="table-dark">
       <tr>
         <th>ID</th>
+        <th>Profile</th>
         <th>Name</th>
         <th>Email</th>
         <th>phone</th>
-        <th>gender</th>
-        <th>education</th>
-        <th>dob</th>
-        <th>file</th>
-        <th>link</th>
-        <th>experience</th>
-        
         <th>Action</th>
 
       </tr>
     </thead>
     <tbody>
-      <tr th:each="emp: ${employee}">
-        <td  th:text="${emp.id}"></td>
-        <td  th:text="${emp.name}"></td>
-        <td  th:text="${emp.email}"></td>
-        <td  th:text="${emp.phone}"></td>
-        <td  th:text="${emp.gender}"></td>
-        <td  th:text="${emp.education}"></td>
-        <td  th:text="${emp.dob}"></td>
-        <td  th:text="${emp.file}"></td>
-        <td  th:text="${emp.link}"></td>
-        <td  th:text="${emp.experience}"></td>
-        
-        
-        
+      <tr th:each="stu: ${staff}">
+        <td  th:text="${stu.id}"></td>
+        <td> <img th:src="${ stu.profilepic != null ? stu.profilepic : '/upload/images.png'  }" th:alt="${stu.profilepic}" height="50px"/></td>
+        <td  th:text="${stu.name}"></td>
+        <td  th:text="${stu.email}"></td>
+        <td  th:text="${stu.phone}"></td>
         <td>
-          <a th:href="@{/ramya/edit/{id}(id=${emp.id})}" class="btn btn-primary">Edit</a>
-          <a th:href="@{/ramya/delete/{id}(id=${emp.id})}" class="btn btn-danger">Delete</a>
+          <a th:href="@{/consumer/edit/{id}(id=${stu.id})}" class="btn btn-primary">Edit</a>
+          <a th:href="@{/consumer/delete/{id}(id=${stu.id})}" class="btn btn-danger">Delete</a>
 </td> 
       </tr>
     </tbody>

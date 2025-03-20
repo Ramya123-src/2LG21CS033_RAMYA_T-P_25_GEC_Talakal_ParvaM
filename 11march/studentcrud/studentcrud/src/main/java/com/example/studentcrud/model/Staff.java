@@ -7,15 +7,16 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "students")
+@Table(name = "staff")
 
-public class Student {
+public class Staff {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private String email;
     private String phone;
+    private String profilepic;
     
     public Long getId( ) {
         return id;
@@ -41,6 +42,15 @@ public class Student {
     public void setPhone(String phone){
         this.phone = phone;
     }
+    public String getProfilepic(){
+        return profilepic;
+    }
+    public void setProfilepic(String profilepic){
+        this.profilepic = profilepic;
+    }
+    
+    
+    
 
 
 }
