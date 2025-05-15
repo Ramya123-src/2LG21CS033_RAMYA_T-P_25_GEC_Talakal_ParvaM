@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"></html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>ECOBUILD</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+    
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="/assets/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="/assets/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link href="/assets/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    
+
+    <!-- Template Stylesheet -->
+    <link href="/assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    
+
+    <!-- Navbar Start -->
+    <div class="container-fluid sticky-top bg-dark bg-light-radial shadow-sm px-5 pe-lg-0">
+        <nav class="navbar navbar-expand-lg bg-dark bg-light-radial navbar-dark py-3 py-lg-0">
+            <a href="index.html" class="navbar-brand">
+                <h1 class="m-0 display-4 text-uppercase text-white"><i class="bi bi-building text-primary me-2"></i>ECOBUILD</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-0">
+                    <a th:href="@{/}" class="nav-item nav-link active">Home</a>
+                    <a th:href="@{/about}" class="nav-item nav-link">About</a>
+                    <a th:href="@{/services}" class="nav-item nav-link">Services</a>
+
+                    <div class="nav-item dropdown">
+                        <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Projects</a>
+                        <div class="dropdown-menu m-0">
+                            <a th:href="@{/projects/commercial}" class="dropdown-item">Commercial</a>
+                            <a th:href="@{/projects/resedential}" class="dropdown-item">Resedential</a>    
+                        </div>
+                    </div>
+                    
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                        <div class="dropdown-menu m-0">
+                            
+                            <a th:href="@{/team}" class="dropdown-item">The Team</a>
+                            <a th:href="@{/testimonial}" class="dropdown-item">Testimonials</a>
+                            <a th:href="@{/blog}" class="dropdown-item">Blog Grid</a>
+                            
+                        </div>
+                    </div>
+                    
+                    <a th:href="@{/contact}" class="nav-item nav-link">Contact</a>
+                    
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Admin</a>
+                        <div class="dropdown-menu m-0">
+                            <a th:href="@{/login}" class="dropdown-item">Login</a>
+      
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Carousel Start -->
+   
+    <div class="container-fluid p-0">
+        <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" src="/assets/img/carousel-1.jpg" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <i class="fa fa-home fa-4x text-primary mb-4 d-none d-sm-block"></i>
+                            <h1 class="display-2 text-uppercase text-white mb-md-4">We shape your buildings thereafter, they shape us</h1>  
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="/assets/img/carousel-2.jpg" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <i class="fa fa-tools fa-4x text-primary mb-4 d-none d-sm-block"></i>
+                            <h1 class="display-2 text-uppercase text-white mb-md-4">We Are Trusted For Your Project</h1>     
+                        </div>
+                    </div>
+                </div>
+            
+            <div class="carousel-item">
+                <img class="w-100" src="/assets/img/carousel-3.jpg" alt="Image">
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                    <div class="p-3" style="max-width: 900px;">
+                        <i class="fa fa-tools fa-4x text-primary mb-4 d-none d-sm-block"></i>
+                        <h1 class="display-2 text-uppercase text-white mb-md-4">Build Your Dream House With Us</h1>     
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+            
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+
+    <!-- About Start -->
+    <div class="container-fluid py-6 px-5">
+        <div class="row g-5">
+            <div class="col-lg-7">
+                <h1 class="display-5 text-uppercase mb-4">We are <span class="text-primary">the Leader</span> in Construction Industry</h1>
+                <h4 class="text-uppercase mb-3 text-body">At Foundation Masters, we are a dedicated team of construction professionals committed to delivering exceptional building solutions with integrity, precision, and excellence. </h4>
+                <p>Our mission is to turn our clients visions into reality by providing reliable, high-quality workmanship that stands the test of time. We take pride in our ability to complete projects on time, within budget, and to the highest standards of safety and quality.</p>
+                <div class="row gx-5 py-2">
+                    <div class="col-sm-6 mb-2">
+                        <p class="fw-bold mb-2"><i class="fa fa-check text-primary me-3"></i>Perfect Planning</p>
+                        <p class="fw-bold mb-2"><i class="fa fa-check text-primary me-3"></i>Professional Workers</p>
+                        <p class="fw-bold mb-2"><i class="fa fa-check text-primary me-3"></i>First Working Process</p>
+                    </div>
+                    <div class="col-sm-6 mb-2">
+                        <p class="fw-bold mb-2"><i class="fa fa-check text-primary me-3"></i>Transparent Communication</p>
+                        <p class="fw-bold mb-2"><i class="fa fa-check text-primary me-3"></i>Timely Project Delivery</p>
+                        <p class="fw-bold mb-2"><i class="fa fa-check text-primary me-3"></i>Budget-Friendly Solutions</p>
+                    </div>
+                </div>
+                <p class="mb-4"> The wide range of services including residential and commercial construction, renovations, interior fit-outs, and project management.</p>
+                <img src="/assets/img/signature.jpg" alt="">
+            </div>
+            <div class="col-lg-5 pb-5" style="min-height: 400px;">
+                <div class="position-relative bg-dark-radial h-100 ms-5">
+                    <img class="position-absolute w-100 h-100 mt-5 ms-n5" src="/assets/img/about.jpg" style="object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+    
+
+    <!-- Services Start -->
+    <div class="container-fluid bg-light py-6 px-5">
+        <div class="text-center mx-auto mb-5" style="max-width: 600px;">
+            <h1 class="display-5 text-uppercase mb-4">We Provide <span class="text-primary">The Best</span> Construction Services</h1>
+        </div>
+        <div class="row g-5">
+            <div class="col-lg-4 col-md-6">
+                <div class="service-item bg-white d-flex flex-column align-items-center text-center">
+                    <img class="img-fluid" src="/assets/img/service-1.jpg" alt="">
+                    <div class="service-icon bg-white">
+                        <i class="fa fa-3x fa-building text-primary"></i>
+                    </div>
+                    <div class="px-4 pb-4">
+                        <h4 class="text-uppercase mb-3">Building Construction</h4>
+                        <p>The specialization in comprehensive services tailored to meet the unique needs of residential, commercial, and industrial projects</p>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-item bg-white rounded d-flex flex-column align-items-center text-center">
+                    <img class="img-fluid" src="/assets/img/service-2.jpg" alt="">
+                    <div class="service-icon bg-white">
+                        <i class="fa fa-3x fa-home text-primary"></i>
+                    </div>
+                    <div class="px-4 pb-4">
+                        <h4 class="text-uppercase mb-3">House Renovation</h4>
+                        <p>A high-quality house renovation solutions that turn outdated spaces into modern, functional, and stylish living areas</p>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-item bg-white rounded d-flex flex-column align-items-center text-center">
+                    <img class="img-fluid" src="/assets/img/service-3.jpg" alt="">
+                    <div class="service-icon bg-white">
+                        <i class="fa fa-3x fa-drafting-compass text-primary"></i>
+                    </div>
+                    <div class="px-4 pb-4">
+                        <h4 class="text-uppercase mb-3">Architecture Design</h4>
+                        <p>The architecture design services blend creativity, functionality, and innovation to create spaces that inspire</p>
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-item bg-white rounded d-flex flex-column align-items-center text-center">
+                    <img class="img-fluid" src="/assets/img/service-4.jpg" alt="">
+                    <div class="service-icon bg-white">
+                        <i class="fa fa-3x fa-palette text-primary"></i>
+                    </div>
+                    <div class="px-4 pb-4">
+                        <h4 class="text-uppercase mb-3">Interior Design</h4>
+                        <p>The comprehensive interior design services that transform empty or outdated spaces into stunning, functional environments tailored to your taste and lifestyle</p>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-item bg-white rounded d-flex flex-column align-items-center text-center">
+                    <img class="img-fluid" src="/assets/img/service-5.jpg" alt="">
+                    <div class="service-icon bg-white">
+                        <i class="fa fa-3x fa-tools text-primary"></i>
+                    </div>
+                    <div class="px-4 pb-4">
+                        <h4 class="text-uppercase mb-3">Fixing & Support</h4>
+                        <p>It specializes in a wide range of fixing solutions, including the installation of doors, windows, fixtures, fittings, and other essential elements that require precision and stability</p>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="service-item bg-white rounded d-flex flex-column align-items-center text-center">
+                    <img class="img-fluid" src="/assets/img/service-6.jpg" alt="">
+                    <div class="service-icon bg-white">
+                        <i class="fa fa-3x fa-paint-brush text-primary"></i>
+                    </div>
+                    <div class="px-4 pb-4">
+                        <h4 class="text-uppercase mb-3">Painting</h4>
+                        <p>The top-quality painting services that enhance the beauty and longevity of your property, and finishes to ensure vibrant colors, smooth textures, and durable surfaces that stand the test of time</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Services End -->
+               
+
+    <!-- Portfolio Start -->
+    <div class="container-fluid bg-light py-6 px-5">
+        <div class="text-center mx-auto mb-5" style="max-width: 600px;">
+            <h1 class="display-5 text-uppercase mb-4">Some Of Our <span class="text-primary">Popular</span> Dream Projects</h1>
+        </div>
+        <div class="row gx-5">
+            <div class="col-12 text-center">
+                <div class="d-inline-block bg-dark-radial text-center pt-4 px-5 mb-5">
+                    <ul class="list-inline mb-0" id="portfolio-flters">
+                        <li class="btn btn-outline-primary bg-white p-2 active mx-2 mb-4" data-filter="*">
+                            <img src="/assets/img/portfolio-1.jpg" style="width: 150px; height: 100px;">
+                            <div class="position-absolute top-0 start-0 end-0 bottom-0 m-2 d-flex align-items-center justify-content-center" style="background: rgba(4, 15, 40, .3);">
+                                <h6 class="text-white text-uppercase m-0">All</h6>
+                            </div>
+                        </li>
+                        <li class="btn btn-outline-primary bg-white p-2 mx-2 mb-4" data-filter=".first">
+                            <img src="/assets/img/portfolio-2.jpg" style="width: 150px; height: 100px;">
+                            <div class="position-absolute top-0 start-0 end-0 bottom-0 m-2 d-flex align-items-center justify-content-center" style="background: rgba(4, 15, 40, .3);">
+                                <h6 class="text-white text-uppercase m-0">Commercial</h6>
+                            </div>
+                        </li>
+                        <li class="btn btn-outline-primary bg-white p-2 mx-2 mb-4" data-filter=".second">
+                            <img src="/assets/img/portfolio-3.jpg" style="width: 150px; height: 100px;">
+                            <div class="position-absolute top-0 start-0 end-0 bottom-0 m-2 d-flex align-items-center justify-content-center" style="background: rgba(4, 15, 40, .3);">
+                                <h6 class="text-white text-uppercase m-0">Resedential</h6>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row g-5 portfolio-container">
+            <div class="col-xl-4 col-lg-6 col-md-6 portfolio-item first">
+                <div class="position-relative portfolio-box">
+                    <img class="img-fluid w-100" src="/assets/img/portfolio-1.jpg" alt="">
+                    <a class="portfolio-title shadow-sm" href="">
+                        <p class="h4 text-uppercase">Urban Core Complex</p>
+                        <span class="text-body"><i class="fa fa-map-marker-alt text-primary me-2"></i>2nd cross,yeshwanthpur,Banglore</span>
+                    </a>
+                    <a class="portfolio-btn" href="/assets/img/portfolio-1.jpg" data-lightbox="portfolio">
+                        <i class="bi bi-plus text-white"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-6 portfolio-item second">
+                <div class="position-relative portfolio-box">
+                    <img class="img-fluid w-100" src="/assets/img/portfolio-2.jpg" alt="">
+                    <a class="portfolio-title shadow-sm" href="">
+                        <p class="h4 text-uppercase">ClearSite Earthworks</p>
+                        <span class="text-body"><i class="fa fa-map-marker-alt text-primary me-2"></i>12th main,Marathahalli,Banglore</span>
+                    </a>
+                    <a class="portfolio-btn" href="/assets/img/portfolio-2.jpg" data-lightbox="portfolio">
+                        <i class="bi bi-plus text-white"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-6 portfolio-item first">
+                <div class="position-relative portfolio-box">
+                    <img class="img-fluid w-100" src="/assets/img/portfolio-3.jpg" alt="">
+                    <a class="portfolio-title shadow-sm" href="">
+                        <p class="h4 text-uppercase">Skyline Rise Project</p>
+                        <span class="text-body"><i class="fa fa-map-marker-alt text-primary me-2"></i>3rd cross,kuvempu Nagar,Mysore</span>
+                    </a>
+                    <a class="portfolio-btn" href="/assets/img/portfolio-3.jpg" data-lightbox="portfolio">
+                        <i class="bi bi-plus text-white"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-6 portfolio-item second">
+                <div class="position-relative portfolio-box">
+                    <img class="img-fluid w-100" src="/assets/img/portfolio-4.jpg" alt="">
+                    <a class="portfolio-title shadow-sm" href="">
+                        <p class="h4 text-uppercase">Second Story Solutions</p>
+                        <span class="text-body"><i class="fa fa-map-marker-alt text-primary me-2"></i>10th main,Hebbal,Mysore</span>
+                    </a>
+                    <a class="portfolio-btn" href="/assets/img/portfolio-4.jpg" data-lightbox="portfolio">
+                        <i class="bi bi-plus text-white"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-6 portfolio-item first">
+                <div class="position-relative portfolio-box">
+                    <img class="img-fluid w-100" src="/assets/img/portfolio-5.jpg" alt="">
+                    <a class="portfolio-title shadow-sm" href="">
+                        <p class="h4 text-uppercase">QuickLift Housing Project</p>
+                        <span class="text-body"><i class="fa fa-map-marker-alt text-primary me-2"></i>4th cross,Rajajinagar,Manglore</span>
+                    </a>
+                    <a class="portfolio-btn" href="/assets/img/portfolio-5.jpg" data-lightbox="portfolio">
+                        <i class="bi bi-plus text-white"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-6 portfolio-item second">
+                <div class="position-relative portfolio-box">
+                    <img class="img-fluid w-100" src="/assets/img/portfolio-6.jpg" alt="">
+                    <a class="portfolio-title shadow-sm" href="">
+                        <p class="h4 text-uppercase">GroundForce Excavation</p>
+                        <span class="text-body"><i class="fa fa-map-marker-alt text-primary me-2"></i>5th main,JP Nagar,Hubbli</span>
+                    </a>
+                    <a class="portfolio-btn" href="/assets/img/portfolio-6.jpg" data-lightbox="portfolio">
+                        <i class="bi bi-plus text-white"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio End -->
+
+
+    <!-- Team Start -->
+    <div class="container-fluid py-6 px-5">
+        <div class="text-center mx-auto mb-5" style="max-width: 600px;">
+            <h1 class="display-5 text-uppercase mb-4">We Are <span class="text-primary">Professional & Expert</span> Workers</h1>
+        </div>
+        <div class="row g-5">
+            <div class="col-xl-3 col-lg-4 col-md-6">
+                <div class="row g-0">
+                    <div class="col-10" style="min-height: 300px;">
+                        <div class="position-relative h-100">
+                            <img class="position-absolute w-100 h-100" src="/assets/img/team-1.jpg" style="object-fit: cover;">
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="h-100 d-flex flex-column align-items-center justify-content-between bg-light">
+                            
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="bg-light p-4">
+                            <h4 class="text-uppercase">Adam Phillips</h4>
+                            <span>CEO & Founder</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6">
+                <div class="row g-0">
+                    <div class="col-10" style="min-height: 300px;">
+                        <div class="position-relative h-100">
+                            <img class="position-absolute w-100 h-100" src="/assets/img/team-2.jpg" style="object-fit: cover;">
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="h-100 d-flex flex-column align-items-center justify-content-between bg-light">
+                           
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="bg-light p-4">
+                            <h4 class="text-uppercase">Dylan Adams</h4>
+                            <span>Civil Engineer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6">
+                <div class="row g-0">
+                    <div class="col-10" style="min-height: 300px;">
+                        <div class="position-relative h-100">
+                            <img class="position-absolute w-100 h-100" src="/assets/img/team-3.jpg" style="object-fit: cover;">
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="h-100 d-flex flex-column align-items-center justify-content-between bg-light">
+                          
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="bg-light p-4">
+                            <h4 class="text-uppercase">Jhon Doe</h4>
+                            <span>Interior Designer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6">
+                <div class="row g-0">
+                    <div class="col-10" style="min-height: 300px;">
+                        <div class="position-relative h-100">
+                            <img class="position-absolute w-100 h-100" src="/assets/img/team-4.jpg" style="object-fit: cover;">
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="h-100 d-flex flex-column align-items-center justify-content-between bg-light">
+                           
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="bg-light p-4">
+                            <h4 class="text-uppercase">Josh Dunn</h4>
+                            <span>Painter</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Team End -->
+
+
+    <!-- Testimonial Start -->
+    <div class="container-fluid bg-light py-6 px-5">
+        <div class="text-center mx-auto mb-5" style="max-width: 600px;">
+            <h1 class="display-5 text-uppercase mb-4">What Our <span class="text-primary">Happy Cleints</span> Say!!!</h1>
+        </div>
+        <div class="row gx-0 align-items-center">
+            <div class="col-xl-4 col-lg-5 d-none d-lg-block">
+                <img class="img-fluid w-100 h-100" src="/assets/img/testimonial.jpg">
+            </div>
+            <div class="col-xl-8 col-lg-7 col-md-12">
+                <div class="testimonial bg-light">
+                    <div class="owl-carousel testimonial-carousel">
+                        <div class="row gx-4 align-items-center">
+                            <div class="col-xl-4 col-lg-5 col-md-5">
+                                <img class="img-fluid w-100 h-100 bg-light p-lg-3 mb-4 mb-md-0" src="/assets/img/testimonial-1.jpg" alt="">
+                            </div>
+                            <div class="col-xl-8 col-lg-7 col-md-7">
+                                <h4 class="text-uppercase mb-0">Daniel Thompson</h4>
+                                
+                                <p class="fs-5 mb-0"><i class="fa fa-2x fa-quote-left text-primary me-2"></i>Working with Ecobuild was an exceptional experience from start to finish. Their team was professional, communicative, and clearly passionate about their work. </p>
+                            </div>
+                        </div>
+                        <div class="row gx-4 align-items-center">
+                            <div class="col-xl-4 col-lg-5 col-md-5">
+                                <img class="img-fluid w-100 h-100 bg-light p-lg-3 mb-4 mb-md-0" src="/assets/img/testimonial-2.jpg" alt="">
+                            </div>
+                            <div class="col-xl-8 col-lg-7 col-md-7">
+                                <h4 class="text-uppercase mb-0">Jessica Lee</h4>
+                                
+                                <p class="fs-5 mb-0"><i class="fa fa-2x fa-quote-left text-primary me-2"></i>From the very first consultation to the final walkthrough, the team at Ecobuild exceeded my expectations. They listened carefully to my vision, offered expert suggestions, and brought the project to life with incredible attention to detail.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonial End -->
+
+
+    <!-- Blog Start -->
+    <div class="container-fluid py-6 px-5">
+        <div class="text-center mx-auto mb-5" style="max-width: 600px;">
+            <h1 class="display-5 text-uppercase mb-4">Latest <span class="text-primary">Articles</span> From Our Blog Post</h1>
+        </div>
+        <div class="row g-5">
+            <div class="col-lg-4 col-md-6">
+                <div class="bg-light">
+                    <img class="img-fluid" src="/assets/img/blog-1.jpg" alt="">
+                    <div class="p-4">
+                        <div class="d-flex justify-content-between mb-4">
+                            <div class="d-flex align-items-center">
+                                <img class="rounded-circle me-2" src="/assets/img/user.jpg" width="35" height="35" alt="">
+                                <span>John Doe</span>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <span class="ms-3"><i class="far fa-calendar-alt text-primary me-2"></i>06 apr, 2021</span>
+                            </div>
+                        </div>
+                        <h4 class="text-uppercase mb-3">Residential Construction</h4>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="bg-light">
+                    <img class="img-fluid" src="/assets/img/blog-2.jpg" alt="">
+                    <div class="p-4">
+                        <div class="d-flex justify-content-between mb-4">
+                            <div class="d-flex align-items-center">
+                                <img class="rounded-circle me-2" src="/assets/img/team-2.jpg" width="35" height="35" alt="">
+                                <span>Dylan Adams</span>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <span class="ms-3"><i class="far fa-calendar-alt text-primary me-2"></i>23 sep, 2022</span>
+                            </div>
+                        </div>
+                        <h4 class="text-uppercase mb-3">Custom Home Construction</h4>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="bg-light">
+                    <img class="img-fluid" src="/assets/img/blog-3.jpg" alt="">
+                    <div class="p-4">
+                        <div class="d-flex justify-content-between mb-4">
+                            <div class="d-flex align-items-center">
+                                <img class="rounded-circle me-2" src="/assets/img/team-4.jpg" width="35" height="35" alt="">
+                                <span>Josh Dunn</span>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <span class="ms-3"><i class="far fa-calendar-alt text-primary me-2"></i>01 Jan, 2025</span>
+                            </div>
+                        </div>
+                        <h4 class="text-uppercase mb-3">Modern Build in Motion</h4>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Blog End -->
+    
+
+    <!-- Footer Start -->
+<div class="footer container-fluid position-relative bg-dark bg-light-radial text-white-50 py-6 px-5">
+    <div class="row g-5">
+        <div class="col-lg-6 pe-lg-5">
+            <a th:href="@{/}" class="navbar-brand">
+                <h1 class="m-0 display-4 text-uppercase text-white">
+                    <i class="bi bi-building text-primary me-2"></i>ECOBUILD
+                </h1>
+            </a>
+
+            <p><i class="fa fa-map-marker-alt me-2"></i>2nd cross, Yeshwanthpur, Bangalore</p>
+            <p><i class="fa fa-phone-alt me-2"></i>+91 9880735038</p>
+            <p><i class="fa fa-envelope me-2"></i>info@example.com</p>
+
+            <div class="d-flex justify-content-start mt-4">
+                <a class="btn btn-lg btn-primary btn-lg-square rounded-0 me-2" href="https://x.com/ecobuildp">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a class="btn btn-lg btn-primary btn-lg-square rounded-0 me-2" href="https://www.facebook.com/ecobuildconst/">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a class="btn btn-lg btn-primary btn-lg-square rounded-0 me-2" href="https://www.linkedin.com/company/ecobuild-consultant/?originalSubdomain=sg">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a class="btn btn-lg btn-primary btn-lg-square rounded-0" href="https://www.instagram.com/ecobuildconstruction/">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+
+        </div>
+
+    
+
+            <div class="col-lg-6 ps-lg-5">
+                <div class="row g-5">
+                    <div class="col-sm-6">
+                        <h4 class="text-white text-uppercase mb-4">Quick Links</h4>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-white-50 mb-2" th:href="@{/}"><i class="fa fa-angle-right me-2"></i>Home</a>
+                            <a class="text-white-50 mb-2" th:href="@{/about}"><i class="fa fa-angle-right me-2"></i>About Us</a>
+                            <a class="text-white-50 mb-2" th:href="@{/services}"><i class="fa fa-angle-right me-2"></i>Services</a>
+                            <a class="text-white-50 mb-2" th:href="@{/projects/commercial}"><i class="fa fa-angle-right me-2"></i>Commercial Projects</a>
+                            <a class="text-white-50 mb-2" th:href="@{/projects/resedential}"><i class="fa fa-angle-right me-2"></i>Resedential Projects</a>
+                            <a class="text-white-50 mb-2" th:href="@{/team}"><i class="fa fa-angle-right me-2"></i>Meet The Team</a>
+                            <a class="text-white-50" th:href="@{/contact}"><i class="fa fa-angle-right me-2"></i>Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <h4 class="text-white text-uppercase mb-4">Popular Links</h4>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-white-50 mb-2" th:href="@{/}"><i class="fa fa-angle-right me-2"></i>Home</a>
+                            <a class="text-white-50 mb-2" th:href="@{/about}"><i class="fa fa-angle-right me-2"></i>About Us</a>
+                            <a class="text-white-50 mb-2" th:href="@{/services}"><i class="fa fa-angle-right me-2"></i>Services</a>
+                            <a class="text-white-50 mb-2" th:href="@{/projects/commercial}"><i class="fa fa-angle-right me-2"></i>Commercial Projects</a>
+                            <a class="text-white-50 mb-2" th:href="@{/projects/resedential}"><i class="fa fa-angle-right me-2"></i>Resedential Projects</a>
+                            <a class="text-white-50 mb-2" th:href="@{/team}"><i class="fa fa-angle-right me-2"></i>Meet The Team</a>
+                            <a class="text-white-50" th:href="@{/contact}"><i class="fa fa-angle-right me-2"></i>Contact Us</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid bg-dark bg-light-radial text-white border-top border-primary px-0">
+    <div class="d-flex flex-column flex-md-row justify-content-between">
+        <div class="py-4 px-5 text-center text-md-start">
+            <p class="mb-0">&copy; <a class="text-primary" th:href="@{/}">EcoBuild</a>. All Rights Reserved.</p>
+        </div>
+        <div class="py-4 px-5 bg-primary footer-shape position-relative text-center text-md-end">
+            <p class="mb-0">
+                <a class="text-dark" href="https://htmlcodex.com"></a>
+            </p>
+        </div>
+    </div>
+</div>
+
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/lib/easing/easing.min.js"></script>
+    <script src="/assets/lib/waypoints/waypoints.min.js"></script>
+    <script src="/assets/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/assets/lib/tempusdominus/js/moment.min.js"></script>
+    <script src="/assets/lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="/assets/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="/assets/lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="/assets/lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="/assets/js/main.js"></script>
+    
+</body>
+
+</html>
